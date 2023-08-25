@@ -1,17 +1,23 @@
 {
   "env": {
+    "browser": true,
     "es2021": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
-  "extends": ["xo-typescript", "prettier"],
+  "extends": ["xo", "prettier"],
   "overrides": [
     {
       "extends": ["xo-typescript", "prettier"],
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts"],
       "rules": {
         "no-unused-vars": "error",
         "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
+      }
+    },
+    {
+      "files": ["**/models/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/naming-convention": "off"
       }
     }
   ],
