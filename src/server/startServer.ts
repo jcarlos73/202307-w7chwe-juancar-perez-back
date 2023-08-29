@@ -1,13 +1,10 @@
-import chalk from "chalk";
+import debugCreator from "debug";
 import app from "./index.js";
 
-const startServer = () => {
-  const port = 4000;
-
+const debug = debugCreator("robots:start:server");
+const startServer = (port: number) => {
   app.listen(port, () => {
-    console.log(
-      chalk.blue(`Listening on ${chalk.bold(`http://localhost:${port}`)}`),
-    );
+    debug(`Listening on http://localhost:${port}`);
   });
 };
 
