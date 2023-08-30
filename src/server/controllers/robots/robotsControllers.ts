@@ -1,7 +1,7 @@
 import { type NextFunction, type Request, type Response } from "express";
-import CustomError from "../../CustomError/CustomError";
-import Robot from "../../database/models/Robot";
-import { type RobotStructure } from "../../types";
+import CustomError from "../../../CustomError/CustomError";
+import Robot from "../../../database/models/Robot";
+import { type RobotStructure } from "../../../types";
 
 export const getRobots = async (
   _req: Request,
@@ -14,7 +14,7 @@ export const getRobots = async (
     res.status(200).json({ robots });
   } catch (error: unknown) {
     const customError = new CustomError(
-      "Cound't get robots",
+      "Couldn't get the robots",
       404,
       (error as Error).message,
     );
