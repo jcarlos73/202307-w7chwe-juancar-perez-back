@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "nodemon .",
+    "start": "node .",
     "start:dev": "nodemon . --watch",
     "test": "jest",
     "test:dev": "jest --watchAll",
@@ -20,7 +20,7 @@
   "dependencies": {
     "@types/debug": "^4.1.8",
     "@types/morgan": "^1.9.5",
-    "chalk": "^5.3.0",
+    "chalk": "^4.1.2",
     "debug": "^4.3.4",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
